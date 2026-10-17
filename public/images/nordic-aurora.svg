@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06080f" />
+      <stop offset="45%" stop-color="#0e1628" />
+      <stop offset="100%" stop-color="#19233c" />
+    </linearGradient>
+    <radialGradient id="aurora1" cx="70%" cy="25%" r="55%">
+      <stop offset="0%" stop-color="#72E0C1" stop-opacity="0.24" />
+      <stop offset="50%" stop-color="#8B9CFF" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#0B0D12" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="aurora2" cx="25%" cy="35%" r="45%">
+      <stop offset="0%" stop-color="#8B9CFF" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#0B0D12" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#sky)" />
+  <rect width="1920" height="1080" fill="url(#aurora1)" />
+  <rect width="1920" height="1080" fill="url(#aurora2)" />
+  <path d="M0,760 L280,620 L540,710 L880,530 L1220,690 L1540,560 L1920,680 L1920,1080 L0,1080 Z" fill="#0d1320" opacity="0.85" />
+  <path d="M0,830 L390,690 L760,800 L1140,650 L1510,790 L1920,690 L1920,1080 L0,1080 Z" fill="#090d16" />
+</svg>

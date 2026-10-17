@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Orbit — New Tab Workspace",
+  "short_name": "Orbit",
+  "description": "Your web, in orbit. A minimalist, customizable personal workspace and start page for every new tab.",
+  "version": "1.0.0",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "optional_permissions": [
+    "bookmarks"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; base-uri 'self';"
+  }
+}

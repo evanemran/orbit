@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+[data-theme="dark"] {
+  --bg-main: #0B0D12;
+  --bg-secondary: #11141B;
+  --bg-card: #161A23;
+  --bg-elevated: #1D2330;
+  --accent-primary: #8B9CFF;
+  --accent-secondary: #72E0C1;
+  --text-primary: #F4F6FC;
+  --text-secondary: #A0A8B8;
+  --border-subtle: #292F3D;
+  --card-opacity: 0.82;
+  --card-blur: 14px;
+  --radius-sm: 0.5rem;
+  --radius-base: 0.75rem;
+  --radius-lg: 1rem;
+  --font-scale: 1;
+}
+
+[data-theme="light"] {
+  --bg-main: #F4F6FA;
+  --bg-secondary: #EAEEF6;
+  --bg-card: #FFFFFF;
+  --bg-elevated: #F8FAFC;
+  --accent-primary: #4F63E8;
+  --accent-secondary: #0EA583;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --border-subtle: #CBD5E1;
+  --card-opacity: 0.88;
+  --card-blur: 14px;
+}
+
+[data-radius="sharp"] {
+  --radius-sm: 0.125rem;
+  --radius-base: 0.25rem;
+  --radius-lg: 0.375rem;
+}
+
+[data-radius="default"] {
+  --radius-sm: 0.5rem;
+  --radius-base: 0.75rem;
+  --radius-lg: 1rem;
+}
+
+[data-radius="rounded"] {
+  --radius-sm: 0.75rem;
+  --radius-base: 1rem;
+  --radius-lg: 1.375rem;
+}
+
+[data-radius="pill"] {
+  --radius-sm: 1rem;
+  --radius-base: 1.35rem;
+  --radius-lg: 1.75rem;
+}
+
+html {
+  font-size: calc(16px * var(--font-scale, 1));
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  min-height: 100vh;
+  margin: 0;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.orbit-glass {
+  background-color: color-mix(in srgb, var(--bg-card) calc(var(--card-opacity, 0.82) * 100%), transparent);
+  backdrop-filter: blur(var(--card-blur, 14px));
+  -webkit-backdrop-filter: blur(var(--card-blur, 14px));
+  border: 1px solid var(--border-subtle);
+}
+
+.orbit-surface {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+}
+
+.orbit-elevated {
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+[data-reduced-motion="true"] *,
+[data-reduced-motion="true"] ::before,
+[data-reduced-motion="true"] ::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
